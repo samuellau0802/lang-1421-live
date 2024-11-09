@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .event-header {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: #fff;
+            font-size: 2.5em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .description {
+            text-align: center;
+            margin: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+        .team-row {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .team-row:hover {
+            transform: translateY(-10px);
+        }
+        .team-name {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .team-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .team-images img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-images img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 599px) {
+            .team-images img {
+                width: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="event-header">Our Event Name</div>
+    <div class="description">
+        Welcome to our event! Below are the teams participating in this event along with their images.
+    </div>
+    <div class="team-row">
+        <div class="team-name">Team 1</div>
+        <div class="team-images">
+            <img src="image1.jpeg" alt="Image 1">
+            <img src="image2.jpeg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+    </div>
+    <div class="team-row">
+        <div class="team-name">Team 2</div>
+        <div class="team-images">
+            <img src="image4.jpg" alt="Image 4">
+            <img src="image5.jpg" alt="Image 5">
+            <img src="image6.jpg" alt="Image 6">
+        </div>
+    </div>
+    <!-- Add more team rows as needed -->
+</body>
+</html>
