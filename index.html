@@ -1,90 +1,162 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>行繪香港</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #495057;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
         }
         .event-header {
+            position: relative;
             text-align: center;
-            padding: 20px;
-            background: linear-gradient(135deg, #6e8efb, #a777e3);
-            color: #fff;
-            font-size: 2.5em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #2e8b57, #3cb371);
+            color: #ffffff;
+            font-size: 2.8em;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .event-header h1 {
+            font-weight: bold;
+            letter-spacing: 1px;
         }
         .description {
+            margin: 40px auto;
+            padding: 30px;
+            max-width: 1200px;
+            background: linear-gradient(135deg, #ffffff, #e0f7fa);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        .teams-joined {
             text-align: center;
-            margin: 20px;
-            font-size: 1.2em;
-            color: #555;
+            margin: 40px auto;
+            padding: 30px;
+            max-width: 1200px;
+            background: linear-gradient(135deg, #ffffff, #ffebee);
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            font-size: medium;
+        }
+        .btn-custom {
+            background-color: #ff7043;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .btn-custom:hover {
+            background-color: #ff5722;
+            color: #ffffff;
         }
         .team-row {
-            margin: 20px;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
+            max-width: 1200px;
+            background: linear-gradient(135deg, #ffffff, #e3f2fd);
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
-        .team-row:hover {
-            transform: translateY(-10px);
+        .team-row.placeholder {
+            text-align: center;
+            font-size: 1.2em;
+            color: #6c757d;
+            background: linear-gradient(135deg, #e1bee7, #ffffff);
         }
         .team-name {
-            font-size: 1.8em;
+            font-size: 1.6em;
+            font-weight: 600;
             margin-bottom: 15px;
             color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .team-name .actions {
+            display: flex;
+            gap: 15px;
         }
         .team-images {
             display: flex;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 20px;
+            justify-content: left;
         }
         .team-images img {
-            width: 100px;
+            width: 150px;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .team-images img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        @media (max-width: 599px) {
-            .team-images img {
-                width: 80px;
-            }
+        .creator-names {
+            font-size: 1em;
+            color: #6c757d;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="event-header">Our Event Name</div>
-    <div class="description">
-        Welcome to our event! Below are the teams participating in this event along with their images.
-    </div>
-    <div class="team-row">
-        <div class="team-name">Team 1</div>
-        <div class="team-images">
-            <img src="image1.jpeg" alt="Image 1">
-            <img src="image2.jpeg" alt="Image 2">
-            <img src="image3.jpg" alt="Image 3">
+    <div class="container">
+        <div class="event-header">
+            <h1>歡迎參加 #行繪香港 步行活動！</h1>
+        </div>
+        <div class="description">
+            <p>在這個快節奏的數位時代，運動變得愈發重要。我們發現，許多同學因學業繁忙而忽略了身體健康。為此，我們特別策劃了「行繪香港」步行活動，旨在鼓勵大家通過有趣的方式養成運動習慣。</p>
+            <h3>參加方式</h3>
+            <ul>
+                <li><strong>自創路線：</strong>使用任何追蹤步行的應用程式，創建您自己的圖案或文字。</li>
+                <li><strong>打卡位置：</strong>路線必須經過指定的打卡位置。</li>
+                <li><strong>步行距離：</strong>至少2公里。</li>
+                <li><strong>分享作品：</strong>完成步行後，請將記錄和自拍分享到社交媒體，並使用 #行繪香港 標籤，並標註朋友，挑戰他們一起創作。</li>
+            </ul>
+            <h3>獎勵機制</h3>
+            <p>我們的團隊將全程觀察所有挑戰作品，獲得大量讚數或特別有趣的作品將有機會在活動網站上展示。</p>
+            <a href="#" class="btn-custom">馬上參加！</a>
+        </div>
+
+        <div class="teams-joined">
+            <h3>目前已有 1 隊加入 #行繪香港</h3>
+        </div>
+
+        <!-- Team Rows -->
+        <div class="team-row">
+            <div class="team-name">
+                <span>Team HKUST</span>
+                <div class="actions">
+                    <button type="button" class="btn btn-outline-primary btn-sm">Like</button>
+                    <button type="button" class="btn btn-outline-success btn-sm">Share</button>
+                </div>
+            </div>
+            <div class="creator-names">@hkust_adventurer, @walk4health, @city_steps, @urban_explorer, @nature_trailblazer</div>
+            <div class="team-images">
+                <img src="image1.jpeg" alt="圖片 1">
+                <img src="image2.jpeg" alt="圖片 2">
+                <img src="image3.jpeg" alt="圖片 3">
+                <img src="image4.jpeg" alt="圖片 4">
+                <img src="image5.jpeg" alt="圖片 5">
+            </div>
+        </div>
+
+        <!-- Placeholder Rows for Future Teams -->
+        <div class="team-row placeholder">
+            <p>等待您的上傳！加入行繪香港，創建您的獨特步行圖案！</p>
+        </div>
+        <div class="team-row placeholder">
+            <p>下一個創意作品就是您！快來加入行繪香港吧！</p>
         </div>
     </div>
-    <div class="team-row">
-        <div class="team-name">Team 2</div>
-        <div class="team-images">
-            <img src="image4.jpg" alt="Image 4">
-            <img src="image5.jpg" alt="Image 5">
-            <img src="image6.jpg" alt="Image 6">
-        </div>
-    </div>
-    <!-- Add more team rows as needed -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
